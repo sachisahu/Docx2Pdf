@@ -7,7 +7,7 @@
 import os
 from fpdf import FPDF
 from docx2pdf import convert
-#Convertion of .txt to .pdf
+#Convertion of .txt to .pdf file
 pdf=FPDF()
 pdf.add_page()
 pdf.set_font("Arial", size = 15)
@@ -17,13 +17,9 @@ for x in f:
 pdf.output("txt/mygfg.pdf")
 print("\nTxt File Conversion Successful")
 
-#Convertion of .docx to .pdf
+#Convertion of .docx to .pdf file
 x=os.path.basename('sample.docx')
 y=x.split('.')
 out=y[0]+".pdf"
 convert(x,r"docx/")
 print("\nFile "+x+" to " + out + " \nConversion Successful")
-
-
-
-
